@@ -4,7 +4,7 @@ This script collects a list of installed packages, available updates, and recent
 
 ### Overview
 
-The `Collect-Installed-Packages` script detects the system's package manager (APT or RPM/YUM/DNF), collects installed packages, lists available updates, and reports packages installed in the last 7 days. Output is formatted as JSON for active response workflows.
+The `Collect-Installed-Packages.sh` script detects the system's package manager (APT or RPM/YUM/DNF), collects installed packages, lists available updates, and reports packages installed in the last 7 days. Output is formatted as JSON for active response workflows.
 
 ### Script Details
 
@@ -22,7 +22,7 @@ The `Collect-Installed-Packages` script detects the system's package manager (AP
 
 #### Command Line Execution
 ```bash
-./Collect-Installed-Packages
+./Collect-Installed-Packages.sh
 ```
 
 #### Parameters
@@ -30,7 +30,7 @@ The `Collect-Installed-Packages` script detects the system's package manager (AP
 | Parameter | Type | Default Value | Description |
 |-----------|------|---------------|-------------|
 | `ARLog`   | string | `/var/ossec/active-response/active-responses.log` | Path for active response JSON output |
-| `LogPath` | string | `/tmp/Collect-Installed-Packages-script.log` | Path for detailed execution logs |
+| `LogPath` | string | `/tmp/Collect-Installed-Packages.sh-script.log` | Path for detailed execution logs |
 | `LogMaxKB` | int | 100 | Maximum log file size in KB before rotation |
 | `LogKeep` | int | 5 | Number of rotated log files to retain |
 
@@ -58,7 +58,7 @@ The `Collect-Installed-Packages` script detects the system's package manager (AP
 {
   "timestamp": "2025-07-18T10:30:45.123Z",
   "host": "HOSTNAME",
-  "action": "Collect-Installed-Packages",
+  "action": "Collect-Installed-Packages.sh",
   "data": {
     "package_manager": "apt",
     "installed_packages": [
@@ -97,7 +97,7 @@ The `Collect-Installed-Packages` script detects the system's package manager (AP
 #### Debugging
 Enable verbose logging:
 ```bash
-VERBOSE=1 ./Collect-Installed-Packages
+VERBOSE=1 ./Collect-Installed-Packages.sh
 ```
 
 ### Contributing
