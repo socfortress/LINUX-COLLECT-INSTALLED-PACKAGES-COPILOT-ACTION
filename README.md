@@ -1,6 +1,6 @@
 ## Collect-Installed-Packages.sh
 
-This script collects a list of installed packages, available updates, and recent installations from the system's package manager, providing a JSON-formatted output for integration with security tools like OSSEC/Wazuh.
+This script collects a list of installed packages, available updates, and recent installations from the system's package manager, providing a JSON-formatted output for integration with your SIEM.
 
 ### Overview
 
