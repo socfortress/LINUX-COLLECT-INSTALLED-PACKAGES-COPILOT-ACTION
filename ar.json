@@ -3,37 +3,7 @@
   "description": "Collects a complete inventory of installed packages on Linux systems, supporting both APT-based and RPM-based distributions. Gathers details about installed packages, available updates, and packages installed within the last 7 days. Produces structured NDJSON output for software inventory and vulnerability management purposes. Writes results atomically to the Active Response log with .new fallback if locked.",
   "technology": "Linux",
   "icon": "linux",
-  "script_parameters": [
-    {
-      "name": "ARLog",
-      "type": "string",
-      "required": false,
-      "description": "Active Response NDJSON output path (atomic overwrite; falls back to .new if locked).",
-      "default": "/var/ossec/active-response/active-responses.log"
-    },
-    {
-      "name": "LogPath",
-      "type": "string",
-      "required": false,
-      "description": "Path to the rotating human-readable script log.",
-      "default": "/tmp/Collect-Installed-Packages-script.log"
-    },
-    {
-      "name": "LogMaxKB",
-      "type": "integer",
-      "required": false,
-      "description": "Maximum size of the log file (KB) before rotation.",
-      "default": 100
-    },
-    {
-      "name": "LogKeep",
-      "type": "integer",
-      "required": false,
-      "description": "Number of rotated log files to keep.",
-      "default": 5
-    }
-  ],
-  "repo_url": "https://raw.githubusercontent.com/socfortress/LINUX-COLLECT-INSTALLED-PACKAGES-COPILOT-ACTION/refs/heads/main/",
+  "repo_url": "https://raw.githubusercontent.com/socfortress/LINUX-COLLECT-INSTALLED-PACKAGES-COPILOT-ACTION/refs/heads/main/Collect-Installed-Packages.sh",
   "script_name": "Collect-Installed-Packages.sh",
   "version": "1.0.0",
   "last_updated": "2025-08-23T00:00:00Z"
